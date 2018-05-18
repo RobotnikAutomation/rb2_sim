@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<arg name="id_robot" default="rb2"/>
+	<arg name="x_init_pose" default="0"/>
+	<arg name="y_init_pose" default="0"/>
+	<arg name="z_init_pose" default="0"/>
+	<arg name="xacro_robot" default="rb2_std.urdf.xacro"/>
+	<arg name="launch_robot_localization" default="false"/>
+	<arg name="launch_amcl_and_mapserver" default="false"/>
+	<arg name="launch_gmapping" default="false"/>
+	<arg name="launch_move_base" default="false"/>
+	<arg name="map_file" default="empty/empty.yaml"/>
+	<arg name="launch_pad" default="true"/>
+  
+	<!-- BEGIN ROBOT-->
+	<group ns="$(arg id_robot)">
+	  
+		<arg name="prefix" value="$(arg id_robot)_"/>		
+		  
+		<!-- Load the URDF into the ROS Parameter Server -->
+		<param name="robot_description" 
+		command="$(find xacro)/xacro '$(find rb2_description)/robots/$(arg xacro_robot)' prefix:=$(arg prefix) --inorder"/>
+
+		<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+			<remap from="/joint_states" to="joint_states" />
+		</node>
+
+		<!-- Spawner model into gazebo -->
+		<node name="urdf_spawner_rb2_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+		 args="-x $(arg x_init_pose) -y $(arg y_init_pose) -z $(arg z_init_pose) -urdf -param robot_description -model $(arg id_robot)" />
+
+        <!-- start pad -->
+        <include if="$(arg launch_pad)" file="$(find rb2_pad)/launch/rb2_pad.launch"/>
+
+		<!-- start rb2_control nodes -->  
+		<include file="$(find rb2_control)/launch/rb2_control.launch"> 
+			<arg name="prefix" value="$(arg prefix)"/>
+			<arg name="sim" value="true"/>
+			<arg name="launch_robot_localization" value="$(arg launch_robot_localization)"/>
+		</include>
+
+		<!-- robot_localization nodes, publishes transformation world->odom->base_footprint -->
+		<include if="$(arg launch_robot_localization)" file="$(find rb2_localization)/launch/rb2_localization_basic.launch"/>
+		
+		<!-- amcl and map server base-->
+		<include if="$(arg launch_amcl_and_mapserver)" file="$(find rb2_localization)/launch/map_server.launch">
+			<arg name="prefix" value="$(arg prefix)"/>
+			<arg name="map_file" value="$(arg map_file)"/>
+		</include>
+		<include if="$(arg launch_amcl_and_mapserver)" file="$(find rb2_localization)/launch/amcl.launch">
+			<arg name="prefix" value="$(arg prefix)"/>
+			<arg name="x_init_pose" value="$(arg x_init_pose)"/>
+			<arg name="y_init_pose" value="$(arg y_init_pose)"/>
+			<arg name="z_init_pose" value="$(arg z_init_pose)"/>
+		</include>
+
+		<!-- move base -->
+		<include if="$(arg launch_move_base)" file="$(find rb2_navigation)/launch/navigation_amcl/move_base.launch">
+			<arg name="prefix" value="$(arg prefix)"/>
+		</include>
+		
+		<!-- gmapping -->
+		<include if="$(arg launch_gmapping)" file="$(find rb2_localization)/launch/gmapping/gmapping.launch">
+			<arg name="prefix" value="$(arg prefix)"/>
+		</include>
+
+	</group>
+
+</launch>
+
