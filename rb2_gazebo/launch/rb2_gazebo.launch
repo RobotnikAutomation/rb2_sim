@@ -24,7 +24,7 @@
 	<arg name="gmapping_robot_a" default="false"/>
 	<arg name="move_base_robot_a" default="false"/>
 	<arg name="amcl_and_mapserver_a" default="false"/>
-	<arg name="map_file_a" default="willow_garage/willow_garage.yaml"/>
+	<arg name="map_file_a" default="$(find rb2_localization)/maps/empty/empty.yaml"/>
 	<arg name="xacro_robot_a" default="rb2_std.urdf.xacro"/>
 	
 	<!-- robot b -->
@@ -36,7 +36,7 @@
 	<arg name="gmapping_robot_b" default="false"/>
 	<arg name="move_base_robot_b" default="false"/>
 	<arg name="amcl_and_mapserver_b" default="false"/>
-	<arg name="map_file_b" default="willow_garage/willow_garage.yaml"/>
+	<arg name="map_file_b" default="$(find rb2_localization)/maps/empty/empty.yaml"/>
 	<arg name="xacro_robot_b" default="rb2_std.urdf.xacro"/>
 	
 	<!-- robot c -->
@@ -48,7 +48,7 @@
 	<arg name="gmapping_robot_c" default="false"/>
 	<arg name="move_base_robot_c" default="false"/>
 	<arg name="amcl_and_mapserver_c" default="false"/>
-	<arg name="map_file_c" default="willow_garage/willow_garage.yaml"/>
+	<arg name="map_file_c" default="$(find rb2_localization)/maps/empty/empty.yaml"/>
 	<arg name="xacro_robot_c" default="rb2_std.urdf.xacro"/>
 	
 	
