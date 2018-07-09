@@ -4,7 +4,7 @@ rb2_sim
 Packages for the simulation of the RB-2 Base
 
 <p align="center">
-  <img src="https://www.robotnik.es/logistics/portfolio/rb-2-base-2/"/>
+  <img src="https://www.robotnik.es/web/wp-content/uploads/2018/02/RB-2-BASE_PPAL-300x169.png"/>
 </p>
 
 
