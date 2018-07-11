@@ -12,6 +12,7 @@
 	<arg name="launch_robot_c" default="false"/>
 	<arg name="gazebo_world" default="$(find rb2_gazebo)/worlds/rb2_office.world"/>
 	<arg name="debug" default="false"/>
+	<arg name="launch_base_hw_sim" default="false"/> <!-- base hw emulator -->
 	
 
 	<!--params of the different robots-->
@@ -69,6 +70,7 @@
 		<arg name="map_file" value="$(arg map_file_a)"/>
  		<arg name="launch_move_base" value="$(arg move_base_robot_a)"/>
 		<arg name="global_frame" value="$(arg map_frame_a)"/>
+		<arg name="launch_base_hw_sim" value="$(arg launch_base_hw_sim)"/>
 	</include>
 	
 	<!--BEGIN ROBOT 2-->
@@ -85,6 +87,7 @@
 		<arg name="map_file" value="$(arg map_file_b)"/>
  		<arg name="launch_move_base" value="$(arg move_base_robot_b)"/>
 		<arg name="global_frame" value="$(arg map_frame_b)"/>
+		<arg name="launch_base_hw_sim" value="$(arg launch_base_hw_sim)"/>
 	</include>
 
 	<!--BEGIN ROBOT 3-->
@@ -101,6 +104,7 @@
 		<arg name="map_file" value="$(arg map_file_c)"/>
  		<arg name="launch_move_base" value="$(arg move_base_robot_c)"/>
 		<arg name="global_frame" value="$(arg map_frame_c)"/>
+		<arg name="launch_base_hw_sim" value="$(arg launch_base_hw_sim)"/>
 	</include>
 	
 	

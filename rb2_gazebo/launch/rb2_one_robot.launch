@@ -10,6 +10,7 @@
 	<arg name="launch_amcl_and_mapserver" default="false"/>
 	<arg name="launch_gmapping" default="false"/>
 	<arg name="launch_move_base" default="false"/>
+	<arg name="launch_base_hw_sim" default="false"/>
 	<arg name="map_file" default="$(find rb2_localization)/maps/empty/empty.yaml"/>
 	<arg name="launch_pad" default="true"/>
         <arg name="prefix" value="$(arg id_robot)_"/>	
@@ -65,6 +66,11 @@
 		
 		<!-- gmapping -->
 		<include if="$(arg launch_gmapping)" file="$(find rb2_localization)/launch/gmapping/gmapping.launch">
+			<arg name="prefix" value="$(arg prefix)"/>
+		</include>
+
+		<!-- base_hw_sim -->
+		<include if="$(arg launch_base_hw_sim)" file="$(find robotnik_base_hw_sim)/launch/rb2_hw_sim.launch">
 			<arg name="prefix" value="$(arg prefix)"/>
 		</include>
 

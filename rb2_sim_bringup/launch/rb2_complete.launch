@@ -8,6 +8,7 @@
 	<arg name="launch_rviz" default="true"/>
 	<arg name="gazebo_world" default="$(find rb2_gazebo)/worlds/rb2_office.world"/>
 	<arg name="launch_pad" default="true"/>
+	<arg name="launch_base_hw_sim" default="false"/>
 	
 	<!-- arguments robot a -->
 	<arg name="id_robot_a" default="rb2_a"/>
@@ -45,7 +46,7 @@
 		<arg name="gazebo_world" value="$(arg gazebo_world)"/>
 		<arg name="launch_pad" value="$(arg launch_pad)"/>
 		<!-- robot_a args -->
-		<arg name="id_robot_a" default="$(arg id_robot_a)"/>
+		<arg name="id_robot_a" value="$(arg id_robot_a)"/>
 		<arg name="launch_robot_a" value="$(arg launch_robot_a)"/>
 		<arg name="map_file_a" value="$(arg map_file_a)"/>
 		<arg name="localization_robot_a" value="$(arg localization_robot_a)"/>
@@ -54,23 +55,24 @@
 		<arg name="amcl_and_mapserver_a" value="$(arg amcl_and_mapserver_a)"/>
 		<arg name="map_frame_a" default="$(arg map_frame_a)"/>
 		<!-- robot_b args -->
-		<arg name="id_robot_b" default="$(arg id_robot_b)"/>
+		<arg name="id_robot_b" value="$(arg id_robot_b)"/>
 		<arg name="launch_robot_b" value="$(arg launch_robot_b)"/>
 		<arg name="localization_robot_b" value="$(arg localization_robot_b)"/>
 		<arg name="gmapping_robot_b" value="$(arg gmapping_robot_b)"/>
 		<arg name="move_base_robot_b" value="$(arg move_base_robot_b)"/>
 		<arg name="amcl_and_mapserver_b" value="$(arg amcl_and_mapserver_b)"/>
 		<arg name="map_file_b" value="$(arg map_file_b)"/>
-		<arg name="map_frame_b" default="$(arg map_frame_b)"/>
+		<arg name="map_frame_b" value="$(arg map_frame_b)"/>
 		<!-- robot_c args -->
-		<arg name="id_robot_c" default="$(arg id_robot_c)"/>
+		<arg name="id_robot_c" value="$(arg id_robot_c)"/>
 		<arg name="launch_robot_c" value="$(arg launch_robot_c)"/>
 		<arg name="localization_robot_c" value="$(arg localization_robot_c)"/>
 		<arg name="gmapping_robot_c" value="$(arg gmapping_robot_c)"/>
 		<arg name="move_base_robot_c" value="$(arg move_base_robot_c)"/>
 		<arg name="amcl_and_mapserver_c" value="$(arg amcl_and_mapserver_c)"/>
 		<arg name="map_file_c" value="$(arg map_file_c)"/>
-		<arg name="map_frame_c" default="$(arg map_frame_c)"/>
+		<arg name="map_frame_c" value="$(arg map_frame_c)"/>
+		<arg name="launch_base_hw_sim" value="$(arg launch_base_hw_sim)"/>
 	</include>
   
 </launch>
