@@ -46,6 +46,7 @@ Launch files that launch the complete simulation of the robot/s.
   <arg name="gazebo_world" default="$(find rb2_gazebo)/worlds/rb2_office.world"/>
   <arg name="launch_pad" default="true"/>
   <arg name="launch_base_hw_sim" default="false"/> <!-- Emulates Robotnik Base HW -->
+  <arg name="launch_elevator_fake_pickup_gazebo" default="false"/> <!-- avoids Gazebo physics to pick carts-->
 
   ```
   Optional robot arguments:

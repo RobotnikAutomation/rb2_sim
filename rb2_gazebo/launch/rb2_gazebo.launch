@@ -13,7 +13,7 @@
 	<arg name="gazebo_world" default="$(find rb2_gazebo)/worlds/rb2_office.world"/>
 	<arg name="debug" default="false"/>
 	<arg name="launch_base_hw_sim" default="false"/> <!-- base hw emulator -->
-	
+	<arg name="launch_elevator_fake_pickup_gazebo" default="false"/> <!-- avoids Gazebo physics -->
 
 	<!--params of the different robots-->
 	<!-- robot a -->
@@ -114,6 +114,9 @@
 		<arg name="world" value="$(arg gazebo_world)"/>
 		<arg name="debug" value="$(arg debug)"/>
 	</include>
+
+	<!-- avoids Gazebo physics to pickup carts -->
+	<include if="$(arg launch_elevator_fake_pickup_gazebo)" file="$(find rb2_sim_bringup)/launch/elevator_fake_pickup_gazebo.launch"/>
   
 </launch>	
 	
