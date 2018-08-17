@@ -37,6 +37,7 @@
 		<!-- start rb2_control nodes -->  
 		<include file="$(find rb2_control)/launch/rb2_control.launch"> 
 			<arg name="prefix" value="$(arg prefix)"/>
+			<arg name="id_robot" value="$(arg id_robot)"/>
 			<arg name="sim" value="true"/>
 			<arg name="launch_robot_localization" value="$(arg launch_robot_localization)"/>
 		</include>
