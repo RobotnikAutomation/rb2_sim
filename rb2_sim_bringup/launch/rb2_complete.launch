@@ -17,8 +17,8 @@
 	<arg name="map_file_a" default="$(find rb2_localization)/maps/willow_garage/willow_garage.yaml"/>
 	<arg name="localization_robot_a" default="false"/>
 	<arg name="gmapping_robot_a" default="false"/>
-	<arg name="move_base_robot_a" default="false"/>
-	<arg name="amcl_and_mapserver_a" default="false"/>
+	<arg name="move_base_robot_a" default="true"/>
+	<arg name="amcl_and_mapserver_a" default="true"/>
 	<arg name="map_frame_a" default="$(arg id_robot_a)_map"/>
 
 	<!-- arguments robot b -->
