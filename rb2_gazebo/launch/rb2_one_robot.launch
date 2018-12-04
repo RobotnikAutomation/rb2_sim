@@ -2,9 +2,12 @@
 <launch>
 	
 	<arg name="id_robot" default="rb2"/>
+	
 	<arg name="x_init_pose" default="0"/>
 	<arg name="y_init_pose" default="0"/>
 	<arg name="z_init_pose" default="0"/>
+	<arg name="a_init_pose" default="0"/>
+
 	<arg name="xacro_robot" default="rb2_std.urdf.xacro"/>
 	<arg name="launch_robot_localization" default="false"/>
 	<arg name="launch_amcl_and_mapserver" default="false"/>
@@ -55,7 +58,7 @@
 			<arg name="prefix" value="$(arg prefix)"/>
 			<arg name="x_init_pose" value="$(arg x_init_pose)"/>
 			<arg name="y_init_pose" value="$(arg y_init_pose)"/>
-			<arg name="z_init_pose" value="$(arg z_init_pose)"/>
+			<arg name="a_init_pose" value="$(arg a_init_pose)"/>
 			<arg name="global_frame" value="$(arg global_frame)"/>
 		</include>
 

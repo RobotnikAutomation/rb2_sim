@@ -62,6 +62,7 @@ Launch files that launch the complete simulation of the robot/s.
   <arg name="x_init_pose_robot_a" default="0" />
   <arg name="y_init_pose_robot_a" default="0" />
   <arg name="z_init_pose_robot_a" default="0" />
+  <arg name="a_init_pose_robot_a" default="0" />
   <arg name="xacro_robot_a" default="rb2_std.urdf.xacro"/>
   <arg name="map_frame_a" default="$(arg id_robot_a)_map"/>
   ```
