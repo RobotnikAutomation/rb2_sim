@@ -55,7 +55,7 @@
 		<arg name="gmapping_robot_a" value="$(arg gmapping_robot_a)"/>
 		<arg name="move_base_robot_a" value="$(arg move_base_robot_a)"/>
 		<arg name="amcl_and_mapserver_a" value="$(arg amcl_and_mapserver_a)"/>
-		<arg name="map_frame_a" default="$(arg map_frame_a)"/>
+		<arg name="map_frame_a" value="$(arg map_frame_a)"/>
 		<!-- robot_b args -->
 		<arg name="id_robot_b" value="$(arg id_robot_b)"/>
 		<arg name="launch_robot_b" value="$(arg launch_robot_b)"/>
