@@ -6,7 +6,7 @@
 	<!--launch_navigation and launch_navigation_nomap args are exclusive
 	and they are (or not) launched for all robots-->
 	<arg name="launch_rviz" default="true"/>
-	<arg name="gazebo_world" default="$(find rb2_gazebo)/worlds/world.world"/>
+	<arg name="gazebo_world" default="$(find rb2_gazebo)/worlds/simple_building_floor.world"/>
 	<arg name="launch_pad" default="true"/>
 	<arg name="launch_base_hw_sim" default="true"/>
 	<arg name="launch_elevator_fake_pickup_gazebo" default="false"/>
