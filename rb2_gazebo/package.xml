@@ -32,11 +32,12 @@
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>tf</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
-  <exec_depend>rb2_control</exec_depend>  
-  <exec_depend>gazebo_ros_control</exec_depend>  
-  <exec_depend>rb2_description</exec_depend> 
-  <exec_depend>hector_gazebo_plugins</exec_depend> 
-  <exec_depend>gazebo_plugins</exec_depend> 
+  <exec_depend>rb2_control</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>rb2_description</exec_depend>
+  <exec_depend>hector_gazebo_plugins</exec_depend>
+  <exec_depend>gazebo_plugins</exec_depend>
+  <exec_depend>rb2_localization</exec_depend> 
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
