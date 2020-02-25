@@ -17,7 +17,7 @@
 
 	<!--params of the different robots-->
 	<!-- robot a -->
-	<arg name="id_robot_a" default="rb2_a"/>
+	<arg name="id_robot_a" default="robot"/>
 	<arg name="x_init_pose_robot_a" default="0" />
 	<arg name="y_init_pose_robot_a" default="0" />
 	<arg name="z_init_pose_robot_a" default="0" />
@@ -29,9 +29,9 @@
 	<arg name="map_file_a" default="$(find rb2_localization)/maps/empty/empty.yaml"/>
 	<arg name="map_frame_a" default="$(arg id_robot_a)_map"/>
 	<arg name="xacro_robot_a" default="rb2_std.urdf.xacro"/>
-	
+
 	<!-- robot b -->
-	<arg name="id_robot_b" default="rb2_b"/>
+	<arg name="id_robot_b" default="robot_b"/>
 	<arg name="x_init_pose_robot_b" default="0" />
 	<arg name="y_init_pose_robot_b" default="1" />
 	<arg name="z_init_pose_robot_b" default="0" />
@@ -43,9 +43,9 @@
 	<arg name="map_file_b" default="$(find rb2_localization)/maps/empty/empty.yaml"/>
 	<arg name="map_frame_b" default="$(arg id_robot_b)_map"/>
 	<arg name="xacro_robot_b" default="rb2_std.urdf.xacro"/>
-	
+
 	<!-- robot c -->
-	<arg name="id_robot_c" default="rb2_c"/>
+	<arg name="id_robot_c" default="robot_c"/>
 	<arg name="x_init_pose_robot_c" default="0" />
 	<arg name="y_init_pose_robot_c" default="2" />
 	<arg name="z_init_pose_robot_c" default="0" />

@@ -6,15 +6,16 @@
 	<!--launch_navigation and launch_navigation_nomap args are exclusive
 	and they are (or not) launched for all robots-->
 	<arg name="launch_rviz" default="true"/>
-	<arg name="gazebo_world" default="$(find rb2_gazebo)/worlds/rb2_office.world"/>
+	<arg name="gazebo_world" default="$(find rb2_gazebo)/worlds/world.world"/>
 	<arg name="launch_pad" default="true"/>
-	<arg name="launch_base_hw_sim" default="false"/>
+	<arg name="launch_base_hw_sim" default="true"/>
 	<arg name="launch_elevator_fake_pickup_gazebo" default="false"/>
-	
+	<arg name="launch_base_hw_sim" value="$(arg launch_base_hw_sim)"/>
+
 	<!-- arguments robot a -->
-	<arg name="id_robot_a" default="rb2_a"/>
+	<arg name="id_robot_a" default="robot"/>
 	<arg name="launch_robot_a" default="true"/>
-	<arg name="map_file_a" default="$(find rb2_localization)/maps/willow_garage/willow_garage.yaml"/>
+	<arg name="map_file_a" default="$(find rb2_localization)/maps/simple_building_floor/simple_building_floor.yaml"/>
 	<arg name="localization_robot_a" default="false"/>
 	<arg name="gmapping_robot_a" default="false"/>
 	<arg name="move_base_robot_a" default="true"/>
@@ -22,19 +23,19 @@
 	<arg name="map_frame_a" default="$(arg id_robot_a)_map"/>
 
 	<!-- arguments robot b -->
-	<arg name="id_robot_b" default="rb2_b"/>
+	<arg name="id_robot_b" default="robot_b"/>
 	<arg name="launch_robot_b" default="false"/>
-	<arg name="map_file_b" default="$(find rb2_localization)/maps/willow_garage/willow_garage.yaml"/>
+	<arg name="map_file_b" default="$(find rb2_localization)/maps/simple_building_floor/simple_building_floor.yaml"/>
 	<arg name="localization_robot_b" default="true"/>
 	<arg name="gmapping_robot_b" default="false"/>
 	<arg name="move_base_robot_b" default="false"/>
 	<arg name="amcl_and_mapserver_b" default="false"/>
 	<arg name="map_frame_b" default="$(arg id_robot_b)_map"/>
-	
+
 	<!-- arguments robot c -->
-	<arg name="id_robot_c" default="rb2_c"/>
+	<arg name="id_robot_c" default="robot_c"/>
 	<arg name="launch_robot_c" default="false"/>
-	<arg name="map_file_c" default="$(find rb2_localization)/maps/willow_garage/willow_garage.yaml"/>
+	<arg name="map_file_c" default="$(find rb2_localization)/maps/simple_building_floor/simple_building_floor.yaml"/>
 	<arg name="localization_robot_c" default="true"/>
 	<arg name="gmapping_robot_c" default="false"/>
 	<arg name="move_base_robot_c" default="false"/>
@@ -74,7 +75,6 @@
 		<arg name="amcl_and_mapserver_c" value="$(arg amcl_and_mapserver_c)"/>
 		<arg name="map_file_c" value="$(arg map_file_c)"/>
 		<arg name="map_frame_c" value="$(arg map_frame_c)"/>
-		<arg name="launch_base_hw_sim" value="$(arg launch_base_hw_sim)"/>
 	</include>
-  
+
 </launch>

@@ -14,15 +14,15 @@ objects:
    default_link: link_0
 
 robots:
-- 
-   model: rb2_a
-   default_link: rb2_a_base_footprint
-- 
-   model: rb2_b
-   default_link: rb2_b_base_footprint
-- 
-   model: rb2_c
-   default_link: rb2_c_base_footprint
+-
+   model: robot
+   default_link: robot_base_footprint
+-
+   model: robot_b
+   default_link: robot_b_base_footprint
+-
+   model: robot_c
+   default_link: robot_c_base_footprint
 
 config:
   # min distance for the simple pick

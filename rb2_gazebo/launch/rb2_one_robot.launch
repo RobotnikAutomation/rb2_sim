@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <launch>
-	
-	<arg name="id_robot" default="rb2"/>
-	
+
+	<arg name="id_robot" default="robot"/>
+
 	<arg name="x_init_pose" default="0"/>
 	<arg name="y_init_pose" default="0"/>
 	<arg name="z_init_pose" default="0"/>
