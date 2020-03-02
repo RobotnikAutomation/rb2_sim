@@ -10,7 +10,6 @@
 	<arg name="launch_pad" default="true"/>
 	<arg name="launch_base_hw_sim" default="true"/>
 	<arg name="launch_elevator_fake_pickup_gazebo" default="false"/>
-	<arg name="launch_base_hw_sim" value="$(arg launch_base_hw_sim)"/>
 
 	<!-- arguments robot a -->
 	<arg name="id_robot_a" default="robot"/>
@@ -48,6 +47,7 @@
 		<arg name="gazebo_world" value="$(arg gazebo_world)"/>
 		<arg name="launch_pad" value="$(arg launch_pad)"/>
 		<arg name="launch_elevator_fake_pickup_gazebo" value="$(arg launch_elevator_fake_pickup_gazebo)"/>
+		<arg name="launch_base_hw_sim" value="$(arg launch_base_hw_sim)"/>
 		<!-- robot_a args -->
 		<arg name="id_robot_a" value="$(arg id_robot_a)"/>
 		<arg name="launch_robot_a" value="$(arg launch_robot_a)"/>
