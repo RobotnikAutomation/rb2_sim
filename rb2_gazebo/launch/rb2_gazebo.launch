@@ -13,7 +13,7 @@
 	<arg name="gazebo_world" default="$(find rb2_gazebo)/worlds/rb2_office.world"/>
 	<arg name="debug" default="false"/>
 	<arg name="launch_base_hw_sim" default="false"/> <!-- base hw emulator -->
-	<arg name="launch_elevator_fake_pickup_gazebo" default="false"/> <!-- avoids Gazebo physics -->
+	<arg name="launch_elevator_fake_pickup_gazebo" default="true"/> <!-- avoids Gazebo physics -->
 
 	<!--params of the different robots-->
 	<!-- robot a -->
